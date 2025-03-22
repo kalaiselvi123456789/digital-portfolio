@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #444;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Banner Section */
+        .banner {
+            background: url('https://source.unsplash.com/1600x600/?hotel,resort') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        .banner h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .banner button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background: #ff6f61;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Rooms Section */
+        .rooms {
+            padding: 50px;
+            background: white;
+        }
+
+        .room {
+            display: inline-block;
+            margin: 20px;
+            width: 300px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .room img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Booking Form */
+        .booking {
+            background: #ddd;
+            padding: 50px;
+        }
+
+        .booking form {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .booking input, .booking select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .booking button {
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luxury Stay Hotel</h1>
+        <p>Experience Comfort & Luxury</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="banner">
+        <h2>Book Your Stay Now</h2>
+        <button onclick="document.getElementById('bookingForm').scrollIntoView();">Book Now</button>
+    </section>
+
+    <section class="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room">
+            <img src="img1.jpg" alt="Deluxe Room">
+            <h3>Deluxe Room</h3>
+            <p>Comfortable stay with a scenic view.</p>
+        </div>
+        <div class="room">
+            <img src="img2.jpg" alt="Suite">
+            <h3>Executive Suite</h3>
+            <p>Experience the ultimate luxury.</p>
+        </div>
+    </section>
+
+    <section id="bookingForm" class="booking">
+        <h2>Book a Room</h2>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="room">Room Type:</label>
+            <select id="room" name="room">
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Executive Suite</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Luxury Stay Hotel. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
